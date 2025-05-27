@@ -1,0 +1,145 @@
+.sidebar {
+    width: 220px;
+    min-height: 100vh;
+    background: #edf3ff;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-logo {
+    font-size: 20px;
+    color: #1ccef4;
+    position: relative;
+    left: 25px;
+    bottom: 10px;
+}
+
+.sidebar-logo span {
+    color: #15176e;
+}
+
+.sidebar-heading {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #767676;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.sidebar-links li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #949494;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.6s ease, color 0.6s ease;
+    margin-bottom: 20px;
+}
+
+.sidebar-links li:hover {
+    color: #15176e;
+}
+
+.sidebar-links li svg {
+    transition: stroke 0.3s ease;
+}
+
+.sidebar-links li:hover svg {
+    stroke: #15176e;
+}
+
+.sidebar-setting {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #999;
+    font-size: 14px;
+}
+
+.sidebar-setting:hover {
+    color: #15176e;
+    cursor: pointer;
+}
+
+.sidebar-setting:hover svg {
+    stroke: #15176e;
+}
+
+.sidebar-toggle-btn {
+    display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 100vh;
+        background: #edf3ff;
+        padding-top: 60px;
+        box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-toggle-btn {
+        display: flex;
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        border-radius: 4px;
+        z-index: 1200;
+        cursor: pointer;
+        padding: 4px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(28, 204, 244, 0.5);
+        transition: background-color 0.3s ease;
+    }
+
+    .sidebar-toggle-btn:hover {
+        background: #15b2db;
+    }
+
+    .sidebar-logo {
+        left: 20px;
+    }
+
+    .sidebar-links {
+        margin-left: 20px;
+    }
+
+    .sidebar-setting {
+        position: relative;
+        left: 0;
+        padding: 10px 0;
+        margin: 200px 24px;
+        color: #999;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}

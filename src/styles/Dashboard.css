@@ -1,0 +1,381 @@
+.dashboard-wrapper {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9fafb;
+    padding: 20px;
+}
+
+.dashboard-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dashboard-left,
+.dashboard-right {
+    flex: 1 1 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard-top {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.human-column {
+    flex: 0 0 60%;
+}
+
+.status-column {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.human-box {
+    background: #f1f5f9;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    overflow: hidden;
+}
+
+.human-box img {
+    width: 70%;
+    height: auto;
+    position: relative;
+    top: 30px;
+    object-fit: cover;
+}
+
+.tag {
+    position: absolute;
+    padding: 6px 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.tag.heart {
+    background: #1322a3;
+    top: 28%;
+    left: 79%;
+    transform: translate(-50%, -50%);
+}
+
+.tag.leg {
+    background: #06b6d4;
+    bottom: 39%;
+    left: 23%;
+    transform: translate(-50%, 50%);
+}
+
+.status-card {
+    background: #f1f5f9;
+    padding: 12px;
+    border-radius: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.status-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.status-card p {
+    font-size: 12px;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.progress-bar {
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.activity-chart {
+    background: #f1f5f9;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.activity-chart h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.activity-chart p {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 10px;
+}
+
+.calendar-box {
+    background: #f1f5f9;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-box h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.calendar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.react-calendar {
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    color: #1e293b;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 12px;
+}
+
+.react-calendar__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.react-calendar__navigation button {
+    background: none;
+    border: none;
+    color: #1e3a8a;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.react-calendar__navigation button:hover {
+    background: #e0e7ff;
+}
+
+.react-calendar__tile {
+    padding: 10px 0;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #1f2937;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.react-calendar__tile--active {
+    background: #1e3a8a !important;
+    color: #fff !important;
+    border-radius: 10px;
+}
+
+.react-calendar__tile--now {
+    border: 1px solid #6366f1;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.react-calendar__month-view__days__day--weekend {
+    color: #ef4444;
+}
+
+.appointment-list {
+    margin-top: 20px;
+}
+
+.appointment-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.appointment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.appointment-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-radius: 16px;
+    padding: 12px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    cursor: default;
+    transition: transform 0.15s ease;
+}
+
+.appointment-card:hover {
+    transform: scale(1.02);
+}
+
+.appointment-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+    padding: 6px;
+    border-radius: 12px;
+    background: rgba(255 255 255 / 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appointment-info {
+    flex: 1;
+}
+
+.appointment-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.appointment-info p {
+    font-size: 13px;
+    color: inherit;
+}
+
+.no-appt {
+    font-size: 14px;
+    color: #6b7280;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.schedule-section {
+    background: #f1f5f9;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.schedule-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 12px;
+}
+
+.schedule-section h5 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.event-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    padding: 12px 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.05);
+}
+
+.event-box .icon {
+    font-size: 22px;
+    color: #6366f1;
+    flex-shrink: 0;
+}
+
+.event-box h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    color: #1e3a8a;
+}
+
+.event-box p {
+    font-size: 12px;
+    color: #475569;
+}
+
+@media (max-width: 1024px) {
+
+    .dashboard-left,
+    .dashboard-right {
+        flex: 1 1 100%;
+    }
+
+    .dashboard-top {
+        flex-direction: column;
+    }
+
+    .human-column,
+    .status-column {
+        flex: 1 1 100%;
+    }
+
+    .appointment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-right {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+
+    .calendar-box,
+    .schedule-section {
+        display: inline-block;
+        vertical-align: top;
+        min-width: 86%;
+    }
+}
