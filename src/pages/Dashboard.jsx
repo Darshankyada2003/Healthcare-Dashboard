@@ -107,7 +107,7 @@ const Dashboard = () => {
                     </div>
 
                     <div className="activity-chart">
-                        <h3>Weekly Appointments Overview</h3>
+                        <h3>Activity</h3>
                         <ResponsiveContainer width="100%" height={250}>
                             <BarChart data={activityData}>
                                 <CartesianGrid strokeDasharray="3 3" />
@@ -129,12 +129,12 @@ const Dashboard = () => {
                 {/* RIGHT PANEL */}
                 <div className="dashboard-right">
                     <div className="calendar-box">
-                        <h4>Select a Date</h4>
+                        <h4>October 2021</h4>
                         <div className="calendar-center">
                             <Calendar onChange={setDate} value={date} />
                         </div>
                         <p>
-                            <strong>Selected:</strong> {date.toDateString()}
+                            {/* <strong>Selected:</strong> {date.toDateString()} */}
                         </p>
 
                         <div className="appointment-list">
@@ -143,17 +143,17 @@ const Dashboard = () => {
                                 <div className="appointment-grid">
                                     {appointmentsToday.map((appt, i) => (
                                         <div
-                                            className="appointment-card"
+                                            className={`appointment-card ${appt.textColor === 'white' ? 'dark' : ''}`}
                                             key={i}
                                             style={{ backgroundColor: appt.bgColor, color: appt.textColor }}
                                         >
-                                            <div className="appointment-icon">{appt.icon}</div>
                                             <div className="appointment-info">
-                                                <div className="appointment-header">
-                                                    <h4>{appt.title}</h4>
-                                                    <span>{appt.time}</span>
+                                                <div className="appt-row">
+                                                    <h4 className="appt-title">{appt.title}</h4>
+                                                    <div className="appointment-icon">{appt.icon}</div>
                                                 </div>
-                                                <p>{appt.doctor}</p>
+                                                <p className="appt-time">{appt.time}</p>
+                                                <p className="appt-doctor">{appt.doctor}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -165,24 +165,25 @@ const Dashboard = () => {
                     </div>
 
                     <div className="schedule-section">
-                        <h3>Upcoming Schedule</h3>
+                        <h3>The Upcoming Schedule</h3>
                         {schedule.map((day, i) => (
-                            <div key={i}>
+                            <div key={i} className="schedule-day-block">
                                 <h5>{day.day}</h5>
-                                <div className="event-list">
+                                <div className="schedule-event-grid">
                                     {day.events.map((event, j) => (
                                         <div key={j} className="event-box">
-                                            <div className="icon">{event.icon}</div>
-                                            <div>
+                                            <div className="event-info">
                                                 <h4>{event.title}</h4>
                                                 <p>{event.time}</p>
                                             </div>
+                                            <div className="event-icon">{event.icon}</div>
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         ))}
                     </div>
+
                 </div>
             </div>
         </div>

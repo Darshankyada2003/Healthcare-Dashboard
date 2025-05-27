@@ -19,7 +19,7 @@ const Sidebar = ({ isOpen }) => {
             </h2>
             <ul className="sidebar-links">
                 <h4 className="sidebar-heading">General</h4>
-                <li><LayoutDashboard size={18} /> Dashboard</li>
+                <li className='active-dashboard'><LayoutDashboard size={18} /> Dashboard</li>
                 <li><ArrowUpDown size={18} /> History</li>
                 <li><Calendar size={18} /> Calendar</li>
                 <li><ClipboardList size={18} /> Appointments</li>

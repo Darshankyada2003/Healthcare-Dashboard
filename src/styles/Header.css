@@ -85,14 +85,28 @@
 .header-icons {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+}
+
+.icon-wrapper,
+.icon-plus {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    font-size: 20px;
 }
 
 .icon-wrapper {
-    cursor: pointer;
-    color: #15176e;
-    display: flex;
-    align-items: center;
+    background-color: #18c3f7;
+}
+
+.icon-plus {
+    background-color: #0f08c9;
+    color: white;
 }
 
 .notification-icon {

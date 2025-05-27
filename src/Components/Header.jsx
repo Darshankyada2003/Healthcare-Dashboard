@@ -30,8 +30,10 @@ const Header = ({ toggleSidebar }) => {
         </div>
 
         <div className="header-icons">
-          <div className="icon-wrapper"><UserPen size={20} /></div>
-          <div className="icon-wrapper"><Plus size={20} /></div>
+          <div className="icon-wrapper">👦</div>
+          <div className="icon-plus">
+            <Plus size={20} />
+          </div>
         </div>
       </div>
     </header>
